@@ -8,10 +8,10 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require_once dirname(__DIR__) . '/src/Framework/Autoloader/Autoloader.php';
+require_once dirname(__DIR__) . '/src/Framework/src/Autoloader/Autoloader.php';
 
 Autoloader::register([
 	'Api\\' => dirname(__DIR__) . '/src/Api',
 	'App\\' => dirname(__DIR__) . '/src/App',
-	'Framework\\' => dirname(__DIR__) . '/src/Framework',
+	'Framework\\' => dirname(__DIR__) . '/src/Framework/src',
 ]);
