@@ -1,1 +1,1 @@
-# Source code for armley.org
+# PHP skeleton application
