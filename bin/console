@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use Framework\DependencyInjection\Container;
+
+require_once dirname(__DIR__) . '/src/bootstrap.php';
+
+$container = new Container();
+
+$dependencies = require_once dirname(__DIR__) . '/src/dependencies.php';
+$dependencies($container);
+
+$sql = file_get_contents(dirname(__DIR__) . '/schema.sql');
+
+$pdo = $container->get(PDO::class);
+$pdo->exec($sql);

@@ -1,0 +1,133 @@
+@import 'variables.css';
+
+html {
+	box-sizing: border-box;
+	font-family: var(--font-family);
+	font-size: 62.5%;
+}
+
+body {
+	background-color: var(--main-background-color);
+	font-size: 1.5rem;
+	min-height: 100vh;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+code {
+	background-color: hsl(0,0%,15%);
+	border-radius: 0.4rem;
+	color: hsl(0,0%,80%);
+	display: block;
+	font-family: monospace;
+	font-size: 1.3rem;
+	margin: 1rem 0;
+	padding: 1.5rem;
+	white-space: pre;
+}
+
+header {
+	background-color: var(--main-color);
+	border-bottom: 0.1rem solid hsl(0, 0%, 90%);
+	color: hsl(0, 0%, 90%);
+	margin-bottom: 2rem;
+	padding: 2rem 0;
+}
+
+header a {
+	color: hsl(0, 0%, 90%);
+	text-decoration: none;
+}
+
+footer {
+	background-color: var(--dark-background-color);
+	border-top: 0.1rem solid hsl(0, 0%, 90%);
+	margin-top: 2rem;
+	padding: 2rem 0;
+}
+
+.container {
+	margin: 0 auto;
+	max-width: 1400px;
+	width: 100%;
+}
+
+.button {
+	all: unset;
+	background-color: hsl(0, 0%, 90%);
+	border: none;
+	border-radius: 0.6rem;
+	color: hsl(0, 0%, 10%);
+	cursor: default;
+	display: inline-block;
+	font-size: 1.4rem;
+	padding: 0.8rem 1.4rem;
+	text-decoration: none;
+}
+
+.button.primary {
+	background-color: var(--main-color);
+	color: hsl(0, 0%, 90%);
+}
+.button.primary:hover {
+	background-color: hsl(130, 48%, 42%);
+	color: hsl(0, 0%, 90%);
+}
+
+.button:hover {
+	background-color: hsl(0, 0%, 80%);
+	color: hsl(0, 0%, 10%);
+}
+
+.field {
+	margin-top: 0.4rem;
+	margin-bottom: 1.4rem;
+}
+
+label {
+	display: block;
+	font-size: 1.4rem;
+	margin-bottom: 0.65rem;
+}
+
+input,
+textarea {
+	border: 0.1rem solid hsl(0, 0%, 70%);
+	display: block;
+	padding: 0.4rem 0.6rem;
+	width: 100%;
+}
+
+input:focus-visible,
+input:hover {
+	outline: none;
+}
+
+nav ul {
+	display: flex;
+	margin: 1rem -0.4rem 0 -0.4rem;
+}
+
+nav ul li {
+	padding: 0 0.4rem;
+}
+
+.card {
+	background-color: hsl(0, 0%, 98%);
+	border: 0.1rem solid hsl(0, 0%, 90%);
+	border-radius: 0.6rem;
+	margin: 1rem 0;
+	padding: 1.5rem;
+}

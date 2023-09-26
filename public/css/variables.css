@@ -1,0 +1,6 @@
+:root {
+	--main-background-color: hsl(0,0%,96%);
+	--dark-background-color: hsl(0,0%,94%);
+	--main-color: hsl(129.7, 50.8%, 38.2%);
+	--font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
