@@ -10,7 +10,7 @@ use Framework\Session\Session;
 use Framework\Template\Renderer;
 
 return function (Container $container) {
-	$container->set(PDO::class, new PDO('sqlite:' . __DIR__ . '/../data.db'));
+	$container->set(PDO::class, new PDO('sqlite:' . __DIR__ . '/../database/data.db'));
 	$container->set(Renderer::class, function ($container) {
 		$renderer = new Renderer([__DIR__ . '/App/Template']);
 		$renderer->addData('brand', 'Website');

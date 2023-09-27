@@ -1,0 +1,27 @@
+DROP TABLE IF EXISTS Comments;
+
+CREATE TABLE Comments (
+	id INTEGER CONSTRAINT PK_Comments PRIMARY KEY AUTOINCREMENT,
+	account_id INTEGER NOT NULL,
+	document_id INTEGER NOT NULL,
+	parent_id INTEGER,
+	content TEXT,
+	CONSTRAINT FK_Comments_Accounts FOREIGN KEY (account_id) REFERENCES Accounts(id),
+	CONSTRAINT FK_Comments_Documents FOREIGN KEY (document_id) REFERENCES Documents(id),
+	CONSTRAINT FK_Comments_Comments FOREIGN KEY (parent_id) REFERENCES Comments(id)
+);
+
+DROP TABLE IF EXISTS Documents;
+
+CREATE TABLE Documents (
+	id INTEGER CONSTRAINT PK_Documents PRIMARY KEY AUTOINCREMENT,
+	uri TEXT NOT NULL
+);
+
+DROP TABLE IF EXISTS Accounts;
+
+CREATE TABLE Accounts (
+	id INTEGER CONSTRAINT PK_Documents PRIMARY KEY AUTOINCREMENT,
+	username TEXT NOT NULL UNIQUE,
+	password TEXT NOT NULL
+);

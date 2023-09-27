@@ -12,24 +12,36 @@ body {
 	min-height: 100vh;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
 	box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
 	margin: 0;
 	padding: 0;
 	font-weight: normal;
 }
 
-ol, ul {
+ol,
+ul {
 	list-style: none;
 }
 
 code {
-	background-color: hsl(0,0%,15%);
+	background-color: hsl(0, 0%, 15%);
 	border-radius: 0.4rem;
-	color: hsl(0,0%,80%);
+	color: hsl(0, 0%, 80%);
 	display: block;
 	font-family: monospace;
 	font-size: 1.3rem;
@@ -61,6 +73,7 @@ footer {
 .container {
 	margin: 0 auto;
 	max-width: 1400px;
+	padding: 0 1.5rem;
 	width: 100%;
 }
 
@@ -81,6 +94,7 @@ footer {
 	background-color: var(--main-color);
 	color: hsl(0, 0%, 90%);
 }
+
 .button.primary:hover {
 	background-color: hsl(130, 48%, 42%);
 	color: hsl(0, 0%, 90%);

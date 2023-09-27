@@ -12,7 +12,12 @@ $container = new Container();
 $dependencies = require_once dirname(__DIR__) . '/src/dependencies.php';
 $dependencies($container);
 
-$sql = file_get_contents(dirname(__DIR__) . '/schema.sql');
+$sql = file_get_contents(dirname(__DIR__) . '/database/migration/20230920000000.sql');
+
+$pdo = $container->get(PDO::class);
+$pdo->exec($sql);
+
+$sql = file_get_contents(dirname(__DIR__) . '/database/seeder/seeder.sql');
 
 $pdo = $container->get(PDO::class);
 $pdo->exec($sql);
