@@ -8,6 +8,7 @@ use Framework\Router\Router;
 use Framework\Security\Security;
 use Framework\Session\Session;
 use Framework\Template\Renderer;
+use Framework\Test\Runner;
 
 return function (Container $container) {
 	$container->set(PDO::class, new PDO('sqlite:' . __DIR__ . '/../database/data.db'));
@@ -21,4 +22,5 @@ return function (Container $container) {
 	$container->set(Request::class, Request::fromGlobals());
 	$container->set(Router::class, new Router());
 	$container->set(Session::class, new Session());
+	$container->set(Runner::class, new Runner(dirname(__DIR__) . '/tests'));
 };

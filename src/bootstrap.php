@@ -14,4 +14,5 @@ Autoloader::register([
 	'Api\\' => dirname(__DIR__) . '/src/Api',
 	'App\\' => dirname(__DIR__) . '/src/App',
 	'Framework\\' => dirname(__DIR__) . '/src/Framework/src',
+	'Tests\\' => dirname(__DIR__) . '/tests',
 ]);
